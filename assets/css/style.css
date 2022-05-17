@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
 a {
   text-decoration: none;
   color: #d1cfcf;
@@ -15,6 +15,10 @@ main h1 {
 
 .h1-bold {
   font-weight: 600;
+}
+
+.h1-thin {
+  font-weight: 300;
 }
 
 main h2 {
@@ -41,11 +45,10 @@ body {
   background-color: #010101;
   font-family: "Poppins", sans-serif;
   color: #fff;
-  margin: 0 1rem;
 }
 
 header {
-  margin: 1rem 0;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,15 +70,25 @@ header {
   color: #fff;
 }
 
-.brand-icon {
+.brand .brand-icon {
   margin-right: 1rem;
 }
 
-.brand-name {
+.brand .brand-name {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
-.brand-name > span {
+.brand-name-light {
+  color: #fff;
+}
+
+.brand-name-dark {
+  color: #010101;
+}
+
+.brand .brand-name > span {
   font-weight: 200;
 }
 
@@ -218,6 +231,10 @@ main {
   margin: 1.5rem 0;
 }
 
+.cta {
+  margin: 0 1rem;
+}
+
 .theme-img {
   aspect-ratio: 1 / 1;
   -o-object-fit: cover;
@@ -239,7 +256,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .showcase-partners :not(:first-child) {
@@ -250,9 +267,258 @@ main {
   width: 70%;
 }
 
-.trending-strip > img {
-  height: 100%;
+.showcase-artists,
+.showcase-statistics {
+  margin: 2rem 1rem;
+}
+
+.showcase-statistics > h1 {
+  font-weight: 700;
+  color: #fff;
+}
+
+.showcase-statistics > p {
+  margin: 0.5rem 0;
+}
+
+.showcase-statistics :first-child {
+  color: #f0d800;
+}
+
+.artists-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.artist {
+  aspect-ratio: 10 / 6;
+  width: 60%;
+}
+
+.artists-gallery::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  font-size: 0.875rem;
+  border-radius: 5rem;
+  padding: 0.8rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-yellow {
+  background-color: #f0d800;
+  color: #010101;
+}
+
+.creators {
+  background-image: url("../images/star-mask.png");
+  background-position: right bottom;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  margin: 0 1rem;
+}
+
+.creators > p {
+  color: #f0d800;
+  margin: 0;
+}
+
+.creators > h2 {
+  margin-bottom: 1rem;
+}
+
+.creators > .btn-wrapper {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.marquee-gap {
+  overflow: hidden;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 3rem 0;
+}
+
+.marquee-nogap {
+  overflow: hidden;
+}
+
+.marquee-inner-rotate {
+  background-color: #f0d800;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  margin: 0 -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.marquee-inner-normal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.marquee-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0;
+  padding: 10px 0;
+  min-width: 100%;
+  white-space: nowrap;
+  -webkit-animation-name: marqueeLine;
+          animation-name: marqueeLine;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  color: #010101;
+}
+
+.marquee-line > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+}
+
+.marquee-inner > img {
+  margin: 0 1.5rem;
+}
+
+@-webkit-keyframes marqueeLine {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueeLine {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.stories {
+  background: url("data:image/svg+xml,%3Csvg width='172' height='116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-77.767 55.612h55.326C-19.131 28.352-17.77 0 3.3 0c12.214 0 16.716 10.354 19.274 19.375 2.828 9.974 4.26 23.215 5.577 36.237h33.695c.742-7.342 1.528-14.825 2.566-21.63.199-1.302 2.243-2.268 4.578-2.156 2.33.11 4.057 1.256 3.859 2.558-1.016 6.658-1.792 14.005-2.522 21.228h33.626c-1.471-12.166-2.924-27.584-6.327-37.892-3.87-11.722-8.933-12.987-10.93-12.987-1.7 0-7.568 1.325-11.696 18.383-.314 1.295-2.444 2.202-4.763 2.028-2.317-.176-3.94-1.368-3.627-2.663C69.3 11.364 73.792 0 86.697 0c12.27 0 16.866 9.623 19.256 16.861 3.46 10.482 4.82 25.02 6.487 38.75h55.327c2.338 0 4.233 1.06 4.233 2.367s-1.895 2.367-4.233 2.367h-54.73c1.073 8.156 2.38 15.975 4.43 22.182 3.87 11.721 8.932 12.987 10.929 12.987 3.901 0 6.758-4.017 8.114-6.412 2.439-4.308 4.295-10.454 5.839-19.342.226-1.3 2.29-2.253 4.623-2.127 2.327.127 4.03 1.284 3.804 2.584-1.603 9.227-3.571 15.681-6.194 20.314-1.361 2.403-5.502 9.716-16.185 9.716-12.27 0-16.866-9.623-19.256-16.861-2.149-6.512-3.494-14.623-4.592-23.042H69.851c-3.144 31.093-6.014 55.612-24.85 55.612-12.214 0-16.716-10.354-19.274-19.375-5.936-20.94-5.666-55.837-11.513-76.466C10.166 5.842 4.838 4.733 3.301 4.733c-1.996 0-7.06 1.265-10.929 12.987-3.404 10.31-4.814 25.373-6.327 37.892H-.662c2.338 0 4.234 1.06 4.234 2.366 0 1.307-1.896 2.367-4.234 2.367h-13.886c-1.098 8.418-2.443 16.53-4.593 23.041-2.39 7.238-6.985 16.861-19.255 16.861-11.29 0-15.787-7.948-18.188-13.927-2.862-7.126-4.44-16.588-5.661-25.975h-15.522c-2.338 0-4.233-1.06-4.233-2.367s1.895-2.366 4.233-2.366ZM45 111.224c1.537 0 6.865-1.11 10.912-15.383 2.744-9.68 4.161-22.678 5.459-35.496H28.63c1.297 12.818 2.714 25.817 5.458 35.496 4.047 14.273 9.375 15.383 10.911 15.383Zm-93.321-25.94c5.82 14.492 15.457 13.596 20.855-2.757 2.05-6.207 3.357-14.026 4.43-22.182h-30.718c1.19 9.088 2.721 18.188 5.433 24.938Z' fill='%23F0D800'/%3E%3C/svg%3E") left bottom no-repeat, url("data:image/svg+xml,%3Csvg width='196' height='116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m60.055 55.672-.053.44H4.233c-1.1 0-2.07.25-2.749.63-.695.388-.984.845-.984 1.236s.29.849.984 1.237c.678.38 1.65.63 2.75.63H20.193l.057.435c1.221 9.39 2.793 18.793 5.629 25.853 1.192 2.968 2.884 6.371 5.644 9.033 2.745 2.647 6.569 4.581 12.08 4.581 5.983 0 10.067-2.338 12.961-5.55 2.91-3.233 4.63-7.368 5.82-10.968 2.133-6.463 3.473-14.534 4.572-22.949l.056-.435h14.325c1.1 0 2.071-.25 2.75-.63.694-.388.984-.846.984-1.237 0-.39-.29-.848-.984-1.237-.679-.379-1.65-.63-2.75-.63H67.481l.068-.56c.204-1.694.408-3.437.614-5.21 1.316-11.293 2.775-23.815 5.734-32.778 1.952-5.912 4.224-9.247 6.31-11.105 2.095-1.868 3.98-2.225 5.094-2.225.903 0 2.748.331 4.871 2.488 2.11 2.143 4.486 6.076 6.523 13.258 2.925 10.317 4.323 24.167 5.72 38.006l.02.196c1.406 13.936 2.82 27.845 5.773 38.264 1.275 4.496 3.018 9.259 5.925 12.894 2.889 3.612 6.93 6.117 12.868 6.117 4.587 0 8.175-1.487 11.045-4.181 2.885-2.707 5.073-6.659 6.792-11.628 3.442-9.95 4.942-23.787 6.516-39.353l.045-.45h35.589l.057.436c1.098 8.415 2.438 16.486 4.571 22.949 1.189 3.6 2.909 7.735 5.82 10.967 2.893 3.213 6.978 5.55 12.961 5.55 10.392 0 14.404-7.085 15.75-9.462l.435.247-.435-.247c2.581-4.558 4.537-10.946 6.137-20.152.065-.379-.13-.823-.734-1.234-.596-.405-1.51-.706-2.605-.766-1.096-.059-2.113.137-2.865.484-.773.356-1.166.816-1.238 1.23-1.547 8.905-3.415 15.12-5.897 19.503l-.435-.247.435.247c-.69 1.218-1.772 2.868-3.193 4.22-1.42 1.348-3.226 2.445-5.356 2.445-1.114 0-2.999-.357-5.095-2.225-2.086-1.859-4.357-5.193-6.309-11.105-2.065-6.256-3.378-14.115-4.451-22.274l-.074-.565h55.3c1.099 0 2.071-.25 2.749-.63.695-.388.984-.846.984-1.237 0-.39-.289-.848-.984-1.237-.678-.379-1.65-.63-2.749-.63H193.997l-.053-.439c-.226-1.856-.445-3.726-.665-5.596-1.409-11.998-2.825-24.043-5.801-33.058-1.189-3.6-2.909-7.735-5.819-10.967C178.765 2.838 174.68.5 168.697.5c-6.273 0-10.479 2.748-13.469 6.866-3.011 4.146-4.788 9.684-6.131 15.233-.092.378.072.815.637 1.23.563.413 1.451.733 2.541.816 1.089.082 2.12-.092 2.901-.424.8-.341 1.236-.8 1.339-1.223 2.074-8.57 4.6-13.254 6.871-15.803 2.287-2.566 4.313-2.962 5.311-2.962 1.114 0 3 .357 5.096 2.225 2.085 1.858 4.357 5.193 6.308 11.105 2.961 8.97 4.453 21.769 5.751 32.912.203 1.74.401 3.439.599 5.077l.068.56h-34.745l.056-.55c.731-7.222 1.508-14.58 2.525-21.253.058-.38-.148-.826-.763-1.234-.607-.402-1.529-.698-2.625-.75-1.097-.052-2.109.15-2.853.501-.764.36-1.144.822-1.207 1.232l-.494-.076.494.076c-1.035 6.79-1.82 14.261-2.562 21.604l-.046.45H109.7l-.046-.45c-1.318-13.034-2.747-26.227-5.56-36.15l.481-.137-.481.136c-1.275-4.496-3.018-9.26-5.925-12.894C95.28 3.006 91.239.5 85.3.5c-5.14 0-9.05 1.723-12.096 4.713-3.06 3.004-5.277 7.314-6.96 12.524-2.81 8.706-4.084 19.774-5.393 31.14-.26 2.258-.522 4.529-.797 6.795Zm83.315 4.173h.553l-.056.55c-1.296 12.807-2.716 25.853-5.475 35.582-2.036 7.182-4.411 11.115-6.522 13.259-2.123 2.156-3.968 2.488-4.871 2.488-.903 0-2.747-.332-4.87-2.488-2.111-2.144-4.486-6.077-6.522-13.259-2.758-9.73-4.179-22.775-5.475-35.582l-.056-.55h33.294Zm-84.408 0h.57l-.074.565c-1.072 8.16-2.384 16.019-4.45 22.274-1.361 4.124-3 7.307-4.804 9.526-1.803 2.218-3.803 3.51-5.88 3.759-2.09.25-4.15-.567-6.034-2.338-1.877-1.766-3.605-4.499-5.076-8.162-2.738-6.815-4.275-15.973-5.465-25.059l-.074-.565h31.287Z' stroke='%23F0D800'/%3E%3C/svg%3E") right top no-repeat;
+  background-size: 80px;
+  padding: 4rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.stories > img {
+  width: 60%;
+}
+
+.stories > p {
+  margin-bottom: 0;
+}
+
+.story-control svg {
+  margin: 1rem 0.5rem;
+}
+
+.download {
+  background-color: #f0d800;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.download h1 {
+  font-size: 2.6rem;
+  color: #010101;
+}
+
+.download p {
+  color: #525252;
+  margin: 0;
+}
+
+.social {
+  margin: 0 1rem;
+}
+
+.subscribe {
+  margin: 1rem;
+}
+
+input[type="text"] {
+  background: none;
+  background: url("../images/icons/arrow-yellow.svg") right center no-repeat;
+  border: none;
+  border-bottom: 1px solid #f0d800;
   width: 100%;
+  font-size: 1.1rem;
+  color: #d1cfcf;
+  padding: 1rem;
+  outline: none;
 }
 
 @media (min-width: 769px) {

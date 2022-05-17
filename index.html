@@ -10,14 +10,14 @@
 
   <link rel="stylesheet" href="./assets/css/reset.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/javascript/index.js/" defer></script>
+  <script type="javascript" src="./assets/javascript/index.js/" defer></script>
 </head>
 
 <body>
   <header>
     <a href="/" class="brand">
-      <img class="brand-icon" src="./assets/images/brand.png" alt="up souly brand logo">
-      <h1 class="brand-name">Up <span>Souly</span></h1>
+      <img class="brand-icon" src="./assets/images/brand.svg" alt="up souly brand logo">
+      <h1 class="brand-name brand-name-light">Up <span>Souly</span></h1>
     </a>
     <nav class="web-nav">
       <a class="nav-link" href="/">Home</a>
@@ -50,9 +50,11 @@
   <div class="line"></div>
 
   <main>
-    <h1>Listen to your favorite<br><span class="h1-bold">anytime, anywhere</span></h1>
-    <p>Listen to over 80 million songs, exclusive releases and music in Hi-Fi sound formate.</p>
-    <img class="theme-img" src="./assets/images/theme.jpg" alt="up souly theme images">
+    <div class="cta">
+      <h1>Listen to your favorite<br><span class="h1-bold">anytime, anywhere</span></h1>
+      <p>Listen to over 80 million songs, exclusive releases and music in Hi-Fi sound formate.</p>
+      <img class="theme-img" src="./assets/images/theme.jpg" alt="up souly theme images">
+    </div>
 
     <div class="showcase-partners">
       <img src="./assets/images/partners/good.png" alt="good music" class="partner">
@@ -61,20 +63,214 @@
       <img src="./assets/images/partners/youtube-music.png" alt="youtube-music music" class="partner">
     </div>
 
-    <div class="trending-strip">
-      <img src="./assets/images/trending-strip.svg" alt="">
+    <div class="marquee-nogap">
+      <div class="marquee-inner-normal">
+        <img class="marquee-line" src="./assets/images/trending-strip.svg" alt="">
+        <img class="marquee-line" src="./assets/images/trending-strip.svg" alt="">
+      </div>
     </div>
     <div class="line"></div>
-    <div class="showcase-artist">
-      <div class="headline">
-        <h2>Some of The Most Famous <span class="h2-highlight">Artists</span> Of All Time in the world</h2>
-        <p class="p-sm">World music is an easy way for people to describe the melding traditional and nontraditional music from foreign countries. Generally, world music refers to
-          sounds from the
-          non-Western part of the world.</p>
-      </div>
-      <div>
+
+    <div class="showcase-artists">
+      <h2>Some of The Most Famous <span class="h2-highlight">Artists</span> Of All Time in the world</h2>
+      <p class="p-sm">World music is an easy way for people to describe the melding traditional and nontraditional music from foreign countries. Generally, world music refers to
+        sounds from the
+        non-Western part of the world.</p>
+      <div class="artists-gallery">
+        <img class="artist" src="./assets/images/artists/1.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/2.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/3.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/4.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/5.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/6.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/7.jpg" alt="">
+        <img class="artist" src="./assets/images/artists/8.jpg" alt="">
 
       </div>
+      <div class="btn-wrapper">
+        <a class="btn btn-yellow" href="">Explore Artist &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="showcase-statistics" style="display:none;">
+      <h1>550e,300</h1>
+      <p>People register this website</p>
+      <h1>50,000</h1>
+      <p>Virtual concept held this year</p>
+    </div>
+
+    <div class="creators">
+      <p>CALLING ALL CREATORS</p>
+      <h2>Get on Up Souly to connect with fans, share your sounds, and grow your audience. What are you waiting for?</h2>
+      <div class="btn-wrapper">
+        <a class="btn btn-yellow" href="">Find out more</a>
+      </div>
+    </div>
+
+    <div class="marquee-gap">
+      <div class="marquee-inner-rotate">
+        <p class="marquee-line">
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            BEATS
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            CHILLOUT
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            AFROBEAT
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            POP
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            HIPPOP
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            DEEP HOUSE
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            JAZZ
+          </span>
+        </p>
+        <p class="marquee-line">
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            BEATS
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            CHILLOUT
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            AFROBEAT
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            POP
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            HIPPOP
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            DEEP HOUSE
+          </span>
+          <span>
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M29.294 8.24491L22.7331 16.0101L22.4987 16.2876L22.6902 16.5963L28.0479 25.2356L18.6353 21.3955L18.299 21.2583L18.0645 21.5357L11.5037 29.301L12.2473 19.1624L12.2738 18.8001L11.9375 18.6629L2.52491 14.8227L12.397 12.3969L12.7498 12.3102L12.7764 11.9479L13.5199 1.8094L18.8776 10.4487L19.0691 10.7574L19.4219 10.6707L29.294 8.24491Z"
+                stroke="black" />
+            </svg>&nbsp;
+            JAZZ
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="stories">
+      <img src="./assets/images/partners/verizon-white.png" alt="">
+      <p>The ability to switch outputs on the fly, so you can flip in midstream from the smart speaker in your office to your living room's big sound or from your desktop app to
+        your
+        phone
+        without missing a beat. The service also lets you upload personal content, although the procedure for doing so is cumbersome.</p>
+      <div class="story-control">
+        <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.207507 12.1675L10.8325 22.7925C11.1092 23.0692 11.5575 23.0692 11.8341 22.7925C12.1108 22.5158 12.1108 22.0675 11.8341 21.7909L2.41824 12.375L33.2916 12.375C33.6832 12.375 34 12.0582 34 11.6666C34 11.2751 33.6832 10.9583 33.2916 10.9583L2.41824 10.9583L11.8341 1.54246C12.1108 1.26574 12.1108 0.817503 11.8341 0.540855C11.6958 0.402531 11.5145 0.333336 11.3333 0.333336C11.1521 0.333336 10.9708 0.402531 10.8324 0.540856L0.207438 11.1659C-0.0692072 11.4425 -0.0692072 11.8907 0.207507 12.1675Z"
+            fill="white" fill-opacity="0.36" />
+        </svg>
+        <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M33.7925 10.8325L23.1675 0.207536C22.8908 -0.0691787 22.4425 -0.0691787 22.1659 0.207536C21.8892 0.484251 21.8892 0.932494 22.1659 1.20914L31.5818 10.625H0.708356C0.316824 10.625 0 10.9418 0 11.3334C0 11.7249 0.316824 12.0417 0.708356 12.0417H31.5818L22.1659 21.4575C21.8892 21.7343 21.8892 22.1825 22.1659 22.4591C22.3042 22.5975 22.4855 22.6667 22.6667 22.6667C22.8479 22.6667 23.0292 22.5975 23.1676 22.4591L33.7926 11.8341C34.0692 11.5575 34.0692 11.1093 33.7925 10.8325Z"
+            fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="download">
+      <a href="/" class="brand">
+        <img class="brand-icon" src="./assets/images/brand-light.svg" alt="up souly brand logo">
+        <h1 class="brand-name brand-name-dark">Up <span>Souly</span></h1>
+      </a>
+      <h1>Never stop listening</h1>
+      <p>An available on Web, iOS, Android, Sonos, Chromecast, and Xbox One</p>
+      <img src="./assets/images/apps/ios.png" alt="">
+      <img src="./assets/images/apps/android.png" alt="">
+    </div>
+    <div class="social">
+      <h1>Enjoy non stop music with Up&nbsp;<span class="h1-thin">Souly</span></h1>
+
+    </div>
+
+    <div class="subscribe">
+      <p>Keep up with our new releases, music and what Emma’s been up to.</p>
+      <form action="" method="post">
+        <input type="text" placeholder="Email" name="" required>
+      </form>
     </div>
   </main>
 
