@@ -13,14 +13,26 @@ $white: #fff;
 a {
   text-decoration: none;
   color: $color-gray;
+  &:hover {
+    color: $white;
+  }
 }
 
-a:hover {
-  color: $white;
-}
+main {
+  h1 {
+    font-size: 3rem;
+  }
 
-main h1 {
-  font-size: 3rem;
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 28px;
+    color: $color-gray;
+  }
 }
 
 .h1-bold {
@@ -31,19 +43,8 @@ main h1 {
   font-weight: 300;
 }
 
-main h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .h2-highlight {
   color: $color-yellow;
-}
-
-main p {
-  margin: 1rem 0;
-  line-height: 28px;
-  color: $color-gray;
 }
 
 .p-sm {
@@ -69,44 +70,45 @@ header {
   display: flex;
   align-items: center;
   color: $white;
-}
+  .brand-icon {
+    margin-right: 1rem;
+  }
 
-.brand .brand-icon {
-  margin-right: 1rem;
-}
+  .brand-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 
-.brand .brand-name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-}
+  .brand-name-light {
+    color: $white;
+  }
 
-.brand-name-light {
-  color: $white;
-}
+  .brand-name-dark {
+    color: $color-dark;
+  }
 
-.brand-name-dark {
-  color: $color-dark;
-}
+  .brand-name > span {
+    font-weight: 200;
+  }
 
-.brand .brand-name > span {
-  font-weight: 200;
-}
-
-.nav-link {
-  font-size: 0.875rem;
-  margin: 0 1rem;
-  transition: color 200ms;
+  .nav-link {
+    font-size: 0.875rem;
+    margin: 0 1rem;
+    transition: color 200ms;
+  }
 }
 
 .web-nav {
   display: none;
 }
 
-.menu > a {
-  overflow: hidden;
-  font-size: 0.875rem;
-  font-weight: 200;
+.menu {
+  a {
+    overflow: hidden;
+    font-size: 0.875rem;
+    font-weight: 200;
+  }
 }
 
 .menu-button-container {
@@ -134,28 +136,32 @@ header {
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.menu-button::before {
-  content: "";
-  margin-top: -8px;
+.menu-button {
+  &::before {
+    content: "";
+    margin-top: -8px;
+  }
+
+  &::after {
+    content: "";
+    margin-top: 8px;
+  }
 }
 
-.menu-button::after {
-  content: "";
-  margin-top: 8px;
-}
+#menu-toggle:checked + .menu-button-container {
+  .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
+  .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
+  .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
 }
 
 .menu {
@@ -169,19 +175,23 @@ header {
   background: $bg-color;
 }
 
-#menu-toggle ~ .menu a {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+#menu-toggle ~ .menu {
+  a {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
 }
 
-#menu-toggle:checked ~ .menu a,
-#menu-toggle:checked ~ .menu .entry {
-  height: 2.5em;
-  padding: 0.5em;
-  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+#menu-toggle:checked ~ .menu {
+  a,
+  .entry {
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
 }
 
 .menu > a {
@@ -236,24 +246,28 @@ main {
   margin: 2rem 1rem;
 }
 
-.showcase-statistics > h1 {
-  font-weight: 700;
-  color: $white;
+.showcase-artists {
+  .artists-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 
-.showcase-statistics > p {
-  margin: 0.5rem 0;
-}
+.showcase-statistics {
+  h1 {
+    font-weight: 700;
+    color: $white;
+  }
 
-.showcase-statistics :first-child {
-  color: $color-yellow;
-}
+  p {
+    margin: 0.5rem 0;
+  }
 
-.artists-gallery {
-  display: flex;
-  gap: 1rem;
-  overflow: hidden;
-  overflow-x: scroll;
+  :first-child {
+    color: $color-yellow;
+  }
 }
 
 .artist {
@@ -289,25 +303,22 @@ main {
   background-position: right bottom;
   background-size: 50%;
   background-repeat: no-repeat;
-  // overflow: hidden;?
   margin: 0 1rem;
+
+  p {
+    color: $color-yellow;
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .btn-wrapper {
+    justify-content: flex-start;
+  }
 }
 
-.creators > p {
-  color: $color-yellow;
-  margin: 0;
-}
-
-.creators > h2 {
-  // color: $color-yellow;
-  margin-bottom: 1rem;
-}
-
-.creators > .btn-wrapper {
-  justify-content: flex-start;
-}
-
-// Horizontal running text
 .marquee-gap {
   overflow: hidden;
   font-family: "Rubik", sans-serif;
@@ -322,10 +333,10 @@ main {
 }
 
 .marquee-inner-rotate {
+  display: flex;
   background-color: $color-yellow;
   transform: rotate(-3deg);
   margin: 0 -5px;
-  display: flex;
 }
 
 .marquee-inner-normal {
@@ -345,12 +356,12 @@ main {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   color: $color-dark;
-}
 
-.marquee-line > span {
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
+  span {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+  }
 }
 
 .marquee-inner > img {
@@ -380,14 +391,14 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
 
-.stories > img {
-  width: 60%;
-}
+  img {
+    width: 60%;
+  }
 
-.stories > p {
-  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .story-control svg {
@@ -404,16 +415,16 @@ main {
   align-items: center;
   text-align: center;
   gap: 1rem;
-}
 
-.download h1 {
-  font-size: 2.6rem;
-  color: $color-dark;
-}
+  h1 {
+    font-size: 2.6rem;
+    color: $color-dark;
+  }
 
-.download p {
-  color: #525252;
-  margin: 0;
+  p {
+    color: #525252;
+    margin: 0;
+  }
 }
 
 .social {
@@ -443,5 +454,24 @@ input[type="text"] {
 
   .web-nav {
     display: block;
+  }
+}
+
+@media (max-width: 319px) {
+  body {
+    display: none;
+  }
+
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    &::before {
+      background-color: #f0d800;
+      padding: 1rem;
+      border-radius: 8px;
+      content: "⚠ Non Supported Display!";
+    }
   }
 }
